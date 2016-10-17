@@ -3,16 +3,15 @@ using System.Collections;
 using System .Collections .Generic;
 public class BulletMove : MonoBehaviour {
 
-	private Transform player;
+	//private Transform player;
 	public float speed;
 	private Vector3 moveDirection;
 	private Rigidbody rigidbodyBullet;
-
 	static private List <BulletMove> bulletsPool;
 
 	void Awake()
 	{
-		player = GameObject.FindGameObjectWithTag ("Player").GetComponent <Transform> ();
+		//player = GameObject.FindGameObjectWithTag ("Player").GetComponent <Transform> ();
 		rigidbodyBullet = GetComponent <Rigidbody> ();
 
 		if (bulletsPool == null)
@@ -31,7 +30,7 @@ public class BulletMove : MonoBehaviour {
 
 	protected void OnEnable()
 	{
-		rigidbodyBullet.velocity = transform .forward  * speed;
+		rigidbodyBullet.velocity = transform .forward  * speed; 
 		StartCoroutine (TimeToDisable ());
 	}
 

@@ -2,12 +2,11 @@
 using System.Collections;
 
 public class Shoot : MonoBehaviour {
-	[SerializeField ]
-	private Transform player;
+	
 	private bool canShoot;
 	// Use this for initialization
 	void Start () {
-		player = GameObject.FindGameObjectWithTag ("Player").GetComponent <Transform> ();
+		
 		canShoot = true;
 	}
 	
